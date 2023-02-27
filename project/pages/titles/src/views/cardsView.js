@@ -12,9 +12,9 @@ export default class CardsView {
     this.#inputSearch.value = ''
     this.#inputSearch.addEventListener('input', (event) => {
       const target = event.target
-      target.disabled = true
+      // target.disabled = true
       fn(target.value)
-      target.disabled = false
+      // target.disabled = false
     })
   }
 
