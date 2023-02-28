@@ -13,11 +13,12 @@ export default class Camera {
     const videoConfig = {
       audio: false,
       video: {
+        // deviceId: "9b633014b25ca5038b2bc1ac24537f2d938458f388c8f6ec2b7c4e5c206db9f8",
         width: globalThis.screen.availWidth,
         height: globalThis.screen.availHeight,
         frameRate: {
           ideal: 60
-        }
+        },
       }
     }
 
@@ -26,9 +27,9 @@ export default class Camera {
     const camera = new Camera();
     camera.video.srcObject = stream;
 
-    camera.video.height = 240;
-    camera.video.width = 320;
-    document.body.append(camera.video);
+    // camera.video.height = 240;
+    // camera.video.width = 320;
+    // document.body.append(camera.video);
 
     await new Promise((resolve) => {
       camera.video.onloadedmetadata = () => {

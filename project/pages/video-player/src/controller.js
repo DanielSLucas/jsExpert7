@@ -22,7 +22,7 @@ export default class Controller {
     let ready = false;
 
     worker.onmessage = ({ data }) => {
-      console.log('controller onmessage!')
+      // console.log('controller onmessage!')
       if (data === 'READY') {
         console.log("worker is ready")
         this.#view.enableButton();
@@ -34,7 +34,7 @@ export default class Controller {
       this.#blinkCounter += blinked;
       if (blinked) this.#view.togglePlayVideo();
 
-      console.log({ blinked });
+      // console.log({ blinked });
     }
 
     return {
